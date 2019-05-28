@@ -1,0 +1,89 @@
+#container {
+    height: 50vh;
+    width: 50vw;
+}
+
+#atom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+    width: 30rem;
+    padding: 4px;
+    margin: 10rem;
+    position: relative;
+    overflow: hidden;
+    /* box-sizing: border-box; */
+}
+
+.orbit {
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    border: 4px solid blueviolet;
+    opacity: 1;
+}
+
+.orbit:nth-child(1) {
+    height: 24rem;
+    width: 24rem;
+    border-width: 4px;
+    animation: electrons1 1.5s infinite linear;
+}
+
+.orbit:nth-child(2) {
+    height: 22rem;
+    width: 22rem;
+    border-width: 3px;
+    animation: electrons2 1.5s infinite linear;
+}
+
+.orbit:nth-child(3) {
+    height: 20rem;
+    width: 20rem;
+    border-width: 2px;
+    animation: electrons3 1.5s infinite linear;
+}
+
+#nucleus {
+    display: block;
+    position: absolute;
+    height: 5rem;
+    width: 5rem;
+    border: 2px solid blueviolet;
+    border-radius: 50%;
+    background-color: mediumblue;
+    background: radial-gradient(circle at 100px 100px, #8d5cff, #000);
+    animation: nucleons 1.5s infinite linear;
+    }
+
+/* ANIMATION */
+
+@keyframes electrons1 {
+    0% {
+        transform: rotateZ(20deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateZ(100deg) rotateY(360deg);
+    }
+}
+
+@keyframes electrons2 {
+    0% {
+        transform: rotateZ(100deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateZ(0deg) rotateX(360deg);
+    }
+}
+
+@keyframes electrons3 {
+    0% {
+        transform: rotateZ(180deg) rotateX(0deg);
+    }
+    100% {
+        transform: rotateZ(0deg) rotateX(270deg);
+    }
+}
+
