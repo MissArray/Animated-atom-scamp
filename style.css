@@ -79,7 +79,7 @@ body {
     position: absolute;
     height: 7rem;
     width: 7rem;
-    background-image: url(/nucleus1.png);
+    background-image: url(./nucleus1.png);
     /* background-image: url(/nucleus.svg); */
     background-size: contain;
     background-repeat: no-repeat;
